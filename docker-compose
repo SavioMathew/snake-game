@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  snake-game:
+    build: .
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
